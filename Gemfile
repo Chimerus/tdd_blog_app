@@ -41,6 +41,9 @@ group :development, :test do
   gem 'byebug'
   # Added rspec
   gem 'rspec-rails', '3.2.3'
+  # rspec guard  
+  gem 'guard-rspec', require: false
+  gem 'spring-commands-rspec'
 end
 
 group :development do
