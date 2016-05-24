@@ -20,7 +20,7 @@ RSpec.feature "Creating Articles" do
     fill_in "Title", with: ""
     fill_in "Body", with: ""
     click_button "Create Article"
-#     want to see failure msg
+    #want to see failure msg
     expect(page).to have_content("Article has not been created")
     expect(page).to have_content("Title can't be blank")
     expect(page).to have_content("Body can't be blank")
