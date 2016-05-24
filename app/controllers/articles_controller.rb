@@ -11,7 +11,10 @@ class ArticlesController < ApplicationController
     if @article.save
       flash[:sucess] = "Article has been created"
     else
-      flash[:danger] = "Article has not been created"
+      #flash[:danger] = "Article has not been created"
+      # if flash, this warning will persist for an extra page!
+      # so use flash.now so only this page has error msg
+      flash.now[:danger] = "Article has not been created"
       render :new
     end
     redirect_to articles_path
