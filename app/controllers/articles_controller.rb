@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  befre_acton :authenticate_user!, except:[:index, :show]
   # This refactors code, runs before the listed actions
   before_filter :set_article, only: [:show, :edit, :update, :destroy]
   def index
